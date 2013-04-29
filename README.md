@@ -3,9 +3,7 @@ LIFO Linked List
 
 A LIFO (Last In First Out) Linked List implementation in C.
 
-I used this buffer for nested functions and measuring their respective runtimes (see example)
-
-You can adjust the `struct item` in `lifo.h` for data types!
+I used this buffer for measuring runtimes in nested functions (see example)
 
 ## Usage
 
@@ -15,6 +13,8 @@ pop it off and take the difference (this is your function runtime).
 
 The nice thing is you won't have to keep track of timestamps withing each function and it also 
 works nested/recursive (as long as you push and pop consequently!)
+
+__TIP__ You can adjust the `struct item` in `lifo.h` for other data types (char* or other structs)
 
 ## Compiling 
 
