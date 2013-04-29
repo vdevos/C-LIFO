@@ -29,6 +29,25 @@ Manual
     
 ## Example
 
-see [main.c](https://github.com/vdevos/C-LIFO/blob/master/main.c)
+See [main.c](https://github.com/vdevos/C-LIFO/blob/master/main.c) for a impression of the way I used it
+
+### Basic example
+    #include "lifo.h"
+    
+    int main(int argc, char** argv)
+    {
+        lifo_init();
+    
+        int i;
+        for(i = 0; i < 10; i++) 
+        {            
+            push(i);
+            pop();
+        }
+    
+        lifo_free();
+        
+        return 0;
+    }
 
     
