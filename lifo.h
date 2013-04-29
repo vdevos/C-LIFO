@@ -28,7 +28,7 @@ struct item* make_null( struct buffer* );
 struct item* is_empty( struct buffer* );
 
 void buffer_print( );
-void buffer_print_element( const struct item* );
+void buffer_print_item( const struct item* );
 struct buffer* buffer_new( void );
 struct buffer* buffer_free( struct buffer* );
 
