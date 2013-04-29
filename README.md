@@ -11,8 +11,8 @@ In main.c the FIFO is used for calculating (nested) process runtimes in microsec
 track of your process' `start time` and `push` this onto the buffer when your function ends you can `pop` it off again 
 and calculate the difference: `current-time` - `start-time`
 
-The nice thing is you won't have to keep track of timestamps withing each function and it also 
-works nested/recursive (as long as you push and pop consequently!)
+The good thing is you don't have to keep track of timestamps withing each function itself and that it also 
+works for nested functions (as long as you push and pop consequently!)
 
 __TIP__ You can adjust the `struct item` in `lifo.h` for other data types (char* or other structs)
 
@@ -29,9 +29,7 @@ Manual
     
 ## Example
 
-See [main.c](https://github.com/vdevos/C-LIFO/blob/master/main.c) for a impression of the way I used it
-
-### Basic example
+### Basic
     #include "lifo.h"
     
     int main(int argc, char** argv)
@@ -49,5 +47,10 @@ See [main.c](https://github.com/vdevos/C-LIFO/blob/master/main.c) for a impressi
         
         return 0;
     }
+
+### Advanced
+
+See [main.c](https://github.com/vdevos/C-LIFO/blob/master/main.c) for a impression (the way I used it)
+
 
     
