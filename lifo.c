@@ -193,12 +193,12 @@ void buffer_print( )
     else
     {
         for( p = ms->head; p; p = p->next ) {
-            buffer_print_element(p);
+            buffer_print_item(p);
         }
     }
 }
 
-void buffer_print_element(const struct item* s) /* you need to adjust this for your datatype (struct item) */
+void buffer_print_item(const struct item* s) /* you need to adjust this for your datatype (struct item) */
 {
   if( s ) printf("timestamp = %llu\n", s->timestamp);
 }
