@@ -1,9 +1,9 @@
-LIFO Linked List
+C-LIFO 
 ======
 
-A LIFO (Last In First Out) Linked List implementation in C.
+A Last In First Out buffer implemented as a Linked List in C.
 
-I used this buffer for measuring runtimes in nested functions (see example)
+I used this buffer for measuring runtimes in nested functions (see example) for logging
 
 ## Usage
 
