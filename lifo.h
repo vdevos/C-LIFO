@@ -4,8 +4,8 @@
 * Note: popts() free's the top list-item and returns it's timestamp 
 */
 
-#ifndef LC_LIFO_H
-#define LC_LIFO_H
+#ifndef LIFO_H
+#define LIFO_H
 
 #include <stdio.h>
 #include <stdlib.h>
