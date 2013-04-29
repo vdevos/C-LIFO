@@ -29,6 +29,6 @@ Manual
     
 ## Example
 
-see [main.c](https://github.com/vdevos/C-LIFO/edit/master/main.c)
+see [main.c](https://github.com/vdevos/C-LIFO/blob/master/main.c)
 
     
