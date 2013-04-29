@@ -3,7 +3,9 @@ C-LIFO
 
 A Last In First Out buffer implemented as a Linked List in C.
 
-I used this buffer for measuring runtimes in nested functions (see [example](https://github.com/vdevos/C-LIFO/blob/master/main.c)) for logging
+I used this buffer for measuring runtimes in nested functions (see [example](https://github.com/vdevos/C-LIFO/blob/master/main.c)) for logging.
+
+Ofcourse you can use this FIFO buffer for other implementations and it offers basic linked list functionality (see [lifo.h](https://github.com/vdevos/C-LIFO/blob/master/lifo.h))
 
 ## Usage
 
