@@ -18,11 +18,11 @@ __TIP__ You can adjust the `struct item` in `lifo.h` for other data types (char*
 
 ## Compiling 
 
-Makefile    
+### Makefile    
     
     make all
     
-Manual
+### Manual
     
     gcc -g -Wall -o lifo.o -c lifo.c
     gcc -g -Wall -o lifo main.c lifo.o  
