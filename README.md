@@ -25,7 +25,7 @@ Makefile
 Manual
     
     gcc -g -Wall -o lifo.o -c lifo.c
-    gcc -g -Wall -o program program.c lifo.o  
+    gcc -g -Wall -o lifo main.c lifo.o  
     
 ## Example
 
