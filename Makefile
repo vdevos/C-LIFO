@@ -11,6 +11,6 @@ lifo: lifo.o
 
 clean:
     -rm -f *.o
-    -rm -f /test/lifotest
+    -rm -f lifo
 
 .PHONY: clean all
