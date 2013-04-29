@@ -7,9 +7,9 @@ I used this buffer for measuring runtimes in nested functions (see example)
 
 ## Usage
 
-In main.c the FIFO is used for calculating (nested) process runtimes. The main idea is that you keep track 
-of your process' start timestamps on a stack (push at start of function) when your function ends you can
-pop it off and take the difference (this is your function runtime).
+In main.c the FIFO is used for calculating (nested) process runtimes in microseconds. The main idea is that you keep 
+track of your process' `start time` and `push` this onto the buffer when your function ends you can `pop` it off again 
+and calculate the difference: `current-time` - `start-time`
 
 The nice thing is you won't have to keep track of timestamps withing each function and it also 
 works nested/recursive (as long as you push and pop consequently!)
