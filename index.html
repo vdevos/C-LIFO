@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="C-LIFO : LIFO (Last In First Out) Linked List implemented in C" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>C-LIFO</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/vdevos/C-LIFO">View on GitHub</a>
+
+          <h1 id="project_title">C-LIFO</h1>
+          <h2 id="project_tagline">LIFO (Last In First Out) Linked List implemented in C</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/vdevos/C-LIFO/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/vdevos/C-LIFO/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>Abstract</h1>
+
+<p>A Last In First Out buffer implemented as a Linked List in C.</p>
+
+<p>I used this buffer for measuring runtimes in nested functions (see <a href="https://github.com/vdevos/C-LIFO/blob/master/main.c">example</a>) for logging.</p>
+
+<p>It offers basic linked list functionality (see <a href="https://github.com/vdevos/C-LIFO/blob/master/lifo.h">lifo.h</a>) so you can easily adjust the code for other purposes.</p>
+
+<h2>Usage</h2>
+
+<p>In main.c the FIFO is used for calculating (nested) process runtimes in microseconds. The main idea is that you keep 
+track of your process' <code>start time</code> and <code>push</code> this onto the buffer when your function ends you can <code>pop</code> it off again 
+and calculate the difference: <code>current-time</code> - <code>start-time</code></p>
+
+<p>The good thing is you don't have to keep track of timestamps withing each function itself and that it also 
+works for nested functions (as long as you push and pop consequently!)</p>
+
+<p><strong>TIP</strong> You can adjust the <code>struct item</code> in <code>lifo.h</code> for other data types.</p>
+
+<pre><code>struct item
+{
+    unsigned long long timestamp;
+    struct item* next;
+}
+</code></pre>
+
+<h2>Compiling</h2>
+
+<h3>Makefile</h3>
+
+<pre><code>make all
+</code></pre>
+
+<h3>Manual</h3>
+
+<pre><code>gcc -g -Wall -o lifo.o -c lifo.c
+gcc -g -Wall -o lifo main.c lifo.o  
+</code></pre>
+
+<h2>Example</h2>
+
+<h3>Basic</h3>
+
+<pre><code>#include "lifo.h"
+
+int main(int argc, char** argv)
+{
+    lifo_init();
+
+    int i;
+    for(i = 0; i &lt; 10; i++) 
+    {            
+        push(i);
+        pop();
+    }
+
+    lifo_free();
+
+    return 0;
+}
+</code></pre>
+
+<h3>Advanced</h3>
+
+<p>See <a href="https://github.com/vdevos/C-LIFO/blob/master/main.c">main.c</a> for a impression (the way I used it)</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">C-LIFO maintained by <a href="https://github.com/vdevos">vdevos</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
