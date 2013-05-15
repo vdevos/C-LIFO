@@ -1,11 +1,11 @@
-C-LIFO 
+Abstract
 ======
 
 A Last In First Out buffer implemented as a Linked List in C.
 
 I used this buffer for measuring runtimes in nested functions (see [example](https://github.com/vdevos/C-LIFO/blob/master/main.c)) for logging.
 
-Ofcourse you can use this FIFO buffer for other implementations and it offers basic linked list functionality (see [lifo.h](https://github.com/vdevos/C-LIFO/blob/master/lifo.h))
+It offers basic linked list functionality (see [lifo.h](https://github.com/vdevos/C-LIFO/blob/master/lifo.h)) so you can easily adjust the code for other purposes.
 
 ## Usage
 
@@ -16,7 +16,13 @@ and calculate the difference: `current-time` - `start-time`
 The good thing is you don't have to keep track of timestamps withing each function itself and that it also 
 works for nested functions (as long as you push and pop consequently!)
 
-__TIP__ You can adjust the `struct item` in `lifo.h` for other data types (char* or other structs)
+__TIP__ You can adjust the `struct item` in `lifo.h` for other data types.
+
+    struct item
+    {
+        unsigned long long timestamp;
+        struct item* next;
+    }
 
 ## Compiling 
 
