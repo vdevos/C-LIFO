@@ -1,7 +1,7 @@
 Abstract
 ======
 
-A Last In First Out buffer implemented as a Linked List in C.
+A Last In First Out Linked List implementation in C.
 
 I used this buffer for measuring runtimes in nested functions (see [example](https://github.com/vdevos/C-LIFO/blob/master/main.c)) for logging.
 
