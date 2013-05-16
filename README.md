@@ -58,7 +58,9 @@ __TIP__ You can adjust the `struct item` in `lifo.h` for other data types.
 
 ### Advanced
 
-See [main.c](https://github.com/vdevos/C-LIFO/blob/master/main.c) for a impression (the way I used it)
+See [main.c](https://github.com/vdevos/C-LIFO/blob/master/main.c).
+
+This should give a impression of the way I used it to measure function runtimes.
 
 
     
