@@ -31,7 +31,7 @@ void function_one() {
     /* Do some stuff */
 
     unsigned long long duration = stop();
-    printf("End of function_one - duration: %llu\n", duration);
+    printf("End of function_one - duration in microseconds: %llu\n", duration);
 }
 
 int main(int argc, char** argv)
