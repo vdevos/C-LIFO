@@ -9,7 +9,7 @@ It offers basic linked list functionality (see [lifo.h](https://github.com/vdevo
 
 ## Usage
 
-In main.c the FIFO is used for calculating (nested) process runtimes in microseconds. The main idea is that you keep 
+In main.c the LIFO is used for calculating (nested) process runtimes in microseconds. The main idea is that you keep 
 track of your process' `start time` and `push` this onto the buffer when your function ends you can `pop` it off again 
 and calculate the difference: `current-time` - `start-time`
 
